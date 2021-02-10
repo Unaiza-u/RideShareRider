@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationPostDetail">
+
+    <LinearLayout
+        android:id="@+id/detailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday 22/2020"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:textColor="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. "
+                android:textSize="30dp"
+                android:textColor="@android:color/holo_green_dark"/>
+
+            <TextView
+                android:id="@+id/notificationPostDetailRatePerSeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textSize="30dp"
+                android:textColor="@android:color/holo_green_dark"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Number of seats:"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/notificationPostDetailNumOfSeats"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/notificationPostDetailStartLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Pindi Gheb"
+            android:textSize="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/notificationPostDetailEndLocation"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wah cantt"
+            android:textSize="20dp"
+            android:layout_marginHorizontal="10dp"/>
+
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/notificationPostDetailMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/detailLayout"
+        tools:context=".DriverTracking" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnContactRider"
+        android:text="Contact Rider"
+        android:background="@drawable/btn_sign_in_background"
+        android:textColor="@android:color/white"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
